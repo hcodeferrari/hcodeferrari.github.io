@@ -951,5 +951,312 @@ header.page-title hr {
     color: var(--white);
   }
 }
+#home {
+  flex-direction: column;
+  margin-top: -80px;
+}
+#home header {
+  width: 100%;
+  min-width: 320px;
+  min-height: 675px;
+  height: 100vh;
+  background-image: url("../images/ferrari-vermelha-1200.webp");
+  background-size: cover;
+  background-position-x: 80%;
+  background-position-y: center;
+  background-repeat: no-repeat;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-end;
+  padding: 2em;
+}
+#home header h1 {
+  font-size: 4em;
+  color: var(--white);
+  font-weight: bold;
+  text-align: right;
+  margin: 0.4em 0;
+  line-height: 1.25em;
+}
+#home header a {
+  min-width: 130px;
+  border: none;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: var(--border-radius);
+  background: transparent;
+  color: var(--black);
+  border: var(--white) 2px solid;
+  border-radius: 8px;
+  color: var(--white);
+}
+#home header a:hover {
+  background-color: var(--black-10);
+}
+#home header a:active {
+  background-color: var(--black-75);
+}
+#home header a:hover {
+  background-color: var(--white);
+  color: var(--black);
+}
+#home .gallery {
+  min-width: 320px;
+  flex-direction: column;
+}
+#home .gallery figure {
+  width: 100%;
+  margin: 0 1px 0 0;
+  position: relative;
+  overflow: hidden;
+}
+#home .gallery figure img {
+  width: 100%;
+}
+#home .gallery figure figcaption {
+  position: absolute;
+  left: 0;
+  bottom: calc(var(--space) * -3);
+  background-color: var(--black-75);
+  color: var(--white);
+  padding: 0.3em 1em;
+  transition-duration: 0.5s;
+}
+#home .gallery figure figcaption h2 {
+  margin: 0;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+#home .gallery figure figcaption p {
+  margin: 0;
+  font-size: 12px;
+  color: var(--gray-3);
+}
+#home .gallery figure:hover figcaption {
+  bottom: var(--space);
+}
+
+@media (min-width: 576px) {
+  #home .gallery {
+    flex-direction: row;
+  }
+}
+@media (min-width: 1200px) {
+  #home {
+    margin-top: -100px;
+  }
+  #home hr {
+    top: 100px;
+  }
+  #home header {
+    height: 100vh;
+    max-height: initial;
+    background-image: url("../images/ferrari-vermelha.webp");
+  }
+}
+@media (min-width: 1920px) {
+  #home header {
+    background-image: url("../images/ferrari-vermelha@2x.webp");
+  }
+}
+#service {
+  margin-top: var(--space);
+  flex-direction: column;
+}
+#service h2 {
+  padding: 0 15px;
+  margin: 0;
+  font-size: 27px;
+  font-weight: bold;
+  color: var(--dark-0);
+  text-transform: uppercase;
+}
+#service h2 small {
+  display: block;
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--gray-2);
+}
+#service > img {
+  width: 100%;
+  margin: 30px 0;
+}
+#service > div {
+  flex-direction: column;
+}
+#service > div a {
+  min-width: 130px;
+  border: none;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: var(--border-radius);
+  background: transparent;
+  color: var(--black);
+  background-color: var(--green);
+  color: var(--white);
+  margin: 0 var(--space);
+}
+#service > div a:hover {
+  background-color: var(--black-10);
+}
+#service > div a:active {
+  background-color: var(--black-75);
+}
+#service > div a:hover {
+  background-color: var(--green-hover);
+}
+#service > div a:active {
+  background-color: var(--green-active);
+}
+#service > div .icons {
+  flex-direction: column;
+}
+#service > div .icons figure {
+  margin-top: 30px;
+  flex-direction: column;
+  align-items: center;
+}
+#service > div .icons figure img {
+  width: 100px;
+}
+#service > div .icons figure figcaption {
+  margin: 30px auto;
+  font-size: 16px;
+  font-weight: bold;
+  color: var(--gray-0);
+}
+
+@media (min-width: 768px) {
+  #service > div {
+    flex-direction: column-reverse;
+  }
+  #service > div .icons {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+  #service > div .icons figure {
+    margin: 100px 0;
+  }
+  #service > div .icons figure img {
+    width: 150px;
+  }
+  #service > div a {
+    width: 200px;
+    margin: 0 auto;
+  }
+}
+@media (min-width: 992px) {
+  #service h2 {
+    font-size: 60px;
+  }
+  #service h2 small {
+    font-size: 35px;
+  }
+}
+#contact {
+  flex-direction: column;
+}
+#contact p {
+  font-size: 15px;
+  color: var(--gray-1);
+  font-weight: 600;
+}
+#contact h2 {
+  padding: 0 var(--space);
+  margin: 0;
+  font-size: 27px;
+  font-weight: bold;
+  color: var(--dark-0);
+  text-transform: uppercase;
+}
+#contact > section {
+  flex-direction: column;
+}
+#contact #map {
+  background-image: url("../images/mapa.png");
+  height: 263px;
+  width: 100%;
+  margin-top: var(--space);
+}
+#contact .contacts {
+  margin: var(--space) 0 0 0;
+  padding: 1em;
+  flex-direction: column;
+}
+#contact .contacts li {
+  border: var(--gray-3) 1px solid;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1em;
+  margin-bottom: 4em;
+  text-align: center;
+  color: var(--gray-1);
+}
+#contact .contacts li img {
+  max-width: 100px;
+  background-color: var(--white);
+  margin: 0 auto;
+  margin-top: -60px;
+  padding: 0 15px;
+}
+#contact .contacts li .title {
+  font-weight: 600;
+  margin: 0;
+  font-size: 24px;
+}
+#contact .contacts li p {
+  font-weight: 300;
+  margin: 0;
+  font-size: 25px;
+}
+
+@media (min-width: 992px) {
+  #contact h2 {
+    font-size: calc(var(--space) * 3);
+  }
+  #contact > section {
+    flex-direction: row;
+  }
+  #contact > section form, #contact > section #map {
+    flex: 1;
+  }
+  #contact > section form {
+    max-width: unset;
+  }
+  #contact > section #map {
+    margin-left: 0;
+    height: 570px;
+  }
+  #contact .contacts {
+    flex-direction: row;
+  }
+  #contact .contacts li {
+    margin-right: 1em;
+    margin-bottom: 2em;
+  }
+  #contact .contacts li:last-child {
+    margin-right: unset;
+  }
+  #contact textarea {
+    height: 245px;
+  }
+}
 
 /*# sourceMappingURL=main.css.map */
