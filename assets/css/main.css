@@ -1024,7 +1024,7 @@ header.page-title hr {
 #home .gallery figure figcaption {
   position: absolute;
   left: 0;
-  bottom: calc(var(--space) * -3);
+  bottom: var(--space);
   background-color: var(--black-75);
   color: var(--white);
   padding: 0.3em 1em;
@@ -1052,6 +1052,9 @@ header.page-title hr {
 @media (min-width: 1200px) {
   #home {
     margin-top: -100px;
+  }
+  #home .gallery figure figcaption {
+    bottom: calc(var(--space) * -3);
   }
   #home hr {
     top: 100px;
@@ -1257,6 +1260,228 @@ header.page-title hr {
   #contact textarea {
     height: 245px;
   }
+}
+#change-photo form {
+  align-items: center;
+  display: flex;
+}
+#change-photo form img {
+  width: 256px;
+  height: 256px;
+  border-radius: 50%;
+}
+#change-photo form #file {
+  display: none;
+}
+#change-photo form .choose-photo {
+  margin: var(--space) 0;
+  width: 256px;
+}
+#change-photo form.cropping img {
+  height: auto;
+  border-radius: 0;
+  margin-top: 0;
+}
+
+#change-password form .page-title {
+  margin: unset;
+}
+
+#schedules {
+  padding-bottom: var(--space);
+}
+#schedules footer.fixed {
+  justify-content: center;
+}
+#schedules footer.fixed a.black {
+  min-width: 250px;
+}
+#schedules ul {
+  margin: 0;
+  padding: 0 var(--space);
+  flex-direction: column;
+}
+#schedules ul li {
+  flex-direction: column;
+}
+#schedules ul li > section {
+  flex-wrap: wrap;
+}
+#schedules ul li > section > div {
+  width: 50%;
+  flex-direction: column;
+}
+#schedules ul li > section > div label, #schedules ul li > section > div span {
+  font-size: 16px;
+  margin: calc(var(--space) / 2) 0;
+  color: var(--dark-0);
+}
+#schedules ul li > section > div label {
+  font-weight: bold;
+}
+#schedules ul li button {
+  min-width: 130px;
+  border: none;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: var(--border-radius);
+  background: transparent;
+  color: var(--black);
+  background-color: var(--red);
+  color: var(--white);
+  max-width: 150px;
+  align-self: center;
+}
+#schedules ul li button:hover {
+  background-color: var(--black-10);
+}
+#schedules ul li button:active {
+  background-color: var(--black-75);
+}
+#schedules ul li button:hover {
+  background-color: var(--red-hover);
+}
+#schedules ul li button:active {
+  background-color: var(--red-active);
+}
+#schedules ul li + li {
+  border-top: var(--gray-10) 1px solid;
+  margin-top: calc(var(--space) / 2);
+  padding-top: calc(var(--space) / 2);
+}
+
+@media (min-width: 992px) {
+  #schedules footer.fixed {
+    justify-content: flex-start;
+  }
+  #schedules ul li {
+    flex-direction: row;
+    justify-content: space-between;
+    width: fit-content;
+  }
+  #schedules ul li > section {
+    flex-wrap: nowrap;
+    flex: 1;
+    max-width: 1000px;
+  }
+  #schedules ul li > section > div {
+    width: unset;
+    min-width: 200px;
+  }
+  #schedules ul li > section > div label {
+    display: none;
+  }
+  #schedules ul li > section > div.service {
+    flex: 1;
+  }
+  #schedules ul li button {
+    align-self: flex-end;
+  }
+  #schedules ul li:first-child > section > div label {
+    display: flex;
+  }
+}
+#time-options h3 {
+  margin: 0 0 var(--space) 0;
+  font-size: 18px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+#time-options .options {
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+#time-options .options label {
+  width: calc(50% - calc(var(--space) / 2));
+  margin-bottom: var(--space);
+}
+#time-options .options label span {
+  min-width: 130px;
+  border: none;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: var(--border-radius);
+  background: transparent;
+  color: var(--black);
+  display: flex;
+  width: 100%;
+  background-color: var(--gray-10);
+  color: var(--dark-0);
+}
+#time-options .options label span:hover {
+  background-color: var(--black-10);
+}
+#time-options .options label span:active {
+  background-color: var(--black-75);
+}
+#time-options .options label input {
+  display: none;
+}
+#time-options .options label input:checked + span {
+  background-color: var(--blue);
+  color: var(--white);
+}
+
+@media (min-width: 992px) {
+  #time-options.page form {
+    min-width: 900px;
+  }
+  #time-options .options {
+    justify-content: flex-start;
+  }
+  #time-options .options label {
+    width: calc(25% - var(--space));
+    margin-right: var(--space);
+  }
+  #time-options h3 {
+    font-size: 22px;
+  }
+}
+#schedules-services .options {
+  margin-top: var(--space);
+  flex-direction: column;
+}
+#schedules-services .options label {
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: var(--space);
+}
+#schedules-services .options label .square {
+  width: 24px;
+  height: 24px;
+  border: var(--gray-10) 2px solid;
+  justify-content: center;
+  align-items: center;
+}
+#schedules-services .options label .square > div {
+  width: 14px;
+  height: 14px;
+  background-color: var(--gray);
+  opacity: 0;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+#schedules-services .options label:hover .square {
+  border: var(--gray-8) 2px solid;
+}
+#schedules-services .options label:hover .square > div {
+  opacity: 0.2;
 }
 
 /*# sourceMappingURL=main.css.map */
