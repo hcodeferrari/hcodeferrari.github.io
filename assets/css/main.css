@@ -1783,5 +1783,240 @@ header.page-title hr {
     margin-top: 100px;
   }
 }
+#schedules-payment {
+  position: relative;
+}
+#schedules-payment.keyboard-open {
+  margin-bottom: 0;
+  height: calc(100vh - 60px);
+}
+#schedules-payment.keyboard-open > main form {
+  max-width: 100%;
+}
+#schedules-payment.keyboard-open footer {
+  position: static;
+  width: 100vw;
+  margin-left: calc(var(--space) * -1);
+}
+#schedules-payment .name {
+  text-transform: uppercase;
+}
+#schedules-payment .nametspan {
+  text-transform: capitalize;
+}
+#schedules-payment > header {
+  height: 260px;
+  min-height: 260px;
+  position: relative;
+}
+#schedules-payment > header h1 > {
+  display: none;
+}
+#schedules-payment > main {
+  align-items: center;
+}
+#schedules-payment > main form {
+  max-width: 100%;
+}
+#schedules-payment > main form .form-creditcard {
+  margin-top: var(--space);
+}
+#schedules-payment > main form .form-creditcard .form-fields {
+  flex-direction: column;
+  width: 100%;
+}
+#schedules-payment > main form .form-creditcard .form-fields .fields {
+  flex-direction: row;
+  justify-content: space-between;
+}
+#schedules-payment > main form .form-creditcard .form-fields .fields .field {
+  width: calc(50% - (calc(var(--space) / 2)));
+}
+#schedules-payment > main form .form-creditcard .form-card {
+  perspective: 1000px;
+  position: absolute;
+  top: 32px;
+  width: 100%;
+  left: 0;
+  display: flex;
+  justify-content: center;
+}
+#schedules-payment > main form .form-creditcard .form-card .faces {
+  transform-style: preserve-3d;
+  transition: transform 0.6s;
+  width: 300px;
+}
+#schedules-payment > main form .form-creditcard .form-card .faces.flipped {
+  transform: rotateY(180deg);
+}
+#schedules-payment > main form .form-creditcard .form-card .faces svg {
+  width: 300px;
+  backface-visibility: hidden;
+  position: absolute;
+}
+#schedules-payment > main form .form-creditcard .form-card .faces svg.back .name {
+  text-transform: capitalize;
+}
+#schedules-payment > main form .form-creditcard .form-card .faces .back {
+  transform: rotateY(180deg);
+}
+
+@media (min-width: 992px) {
+  #schedules-payment {
+    position: static;
+  }
+  #schedules-payment.keyboard-open {
+    margin-bottom: 0;
+    height: calc(100vh - 60px);
+  }
+  #schedules-payment.keyboard-open > main form {
+    max-width: 900px;
+  }
+  #schedules-payment.keyboard-open footer {
+    position: fixed;
+    width: 100%;
+    margin-left: initial;
+  }
+  #schedules-payment > header {
+    height: 130px;
+  }
+  #schedules-payment > header h1 {
+    display: block;
+  }
+  #schedules-payment > main {
+    align-items: flex-start;
+  }
+  #schedules-payment > main form {
+    max-width: 900px;
+    justify-content: space-between;
+  }
+  #schedules-payment > main form .form-creditcard .form-card {
+    position: static;
+    display: flex;
+    justify-content: center;
+    padding-left: var(--space);
+  }
+  #schedules-payment > main form .form-creditcard .form-card .faces {
+    width: 100%;
+  }
+  #schedules-payment > main form .form-creditcard .form-card .faces svg {
+    width: 398px;
+    position: absolute;
+  }
+}
+#schedules-address main {
+  margin-top: var(--space);
+}
+#schedules-address main form hr {
+  margin: var(-space) auto;
+  border: none;
+  border-top: var(--gray-3) 1px solid;
+}
+#schedules-address main form .btn-create {
+  min-width: 130px;
+  border: none;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: var(--border-radius);
+  background: transparent;
+  color: var(--black);
+  background-color: var(--green);
+  color: var(--white);
+}
+#schedules-address main form .btn-create:hover {
+  background-color: var(--black-10);
+}
+#schedules-address main form .btn-create:active {
+  background-color: var(--black-75);
+}
+#schedules-address main form .btn-create:hover {
+  background-color: var(--green-hover);
+}
+#schedules-address main form .btn-create:active {
+  background-color: var(--green-active);
+}
+#schedules-address main form .btn-update {
+  min-width: 130px;
+  border: none;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: var(--border-radius);
+  background: transparent;
+  color: var(--black);
+  background-color: var(--gray-3);
+  color: var(--gray-0);
+}
+#schedules-address main form .btn-update:hover {
+  background-color: var(--black-10);
+}
+#schedules-address main form .btn-update:active {
+  background-color: var(--black-75);
+}
+#schedules-address main form .btn-update:hover {
+  background-color: var(--gray-hover);
+}
+#schedules-address main form .btn-update:active {
+  background-color: var(--gray-active);
+}
+#schedules-address main form .addresses {
+  flex-direction: column;
+}
+#schedules-address main form .addresses label {
+  cursor: pointer;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: var(--space);
+}
+#schedules-address main form .addresses label address {
+  font-style: normal;
+  margin-left: calc(var(--space) / 2);
+}
+#schedules-address main form .addresses label .circle {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: var(--gray-10) 2px solid;
+  justify-content: center;
+  align-items: center;
+}
+#schedules-address main form .addresses label .circle > div {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background-color: var(--gray);
+  opacity: 0;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+#schedules-address main form .addresses label:hover .circle {
+  border: var(--gray-8) 2px solid;
+}
+#schedules-address main form .addresses label:hover .circle > div {
+  opacity: 0.2;
+}
+#schedules-address main form .addresses label input {
+  display: none;
+}
+#schedules-address main form .addresses label input:checked + .circle > div {
+  opacity: 1;
+  background-color: var(--blue);
+}
 
 /*# sourceMappingURL=main.css.map */
