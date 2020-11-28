@@ -2019,4 +2019,125 @@ header.page-title hr {
   background-color: var(--blue);
 }
 
+#schedules-address-form header h1 small {
+  display: flex;
+}
+#schedules-address-form main form #schedule_at {
+  font-size: 20px;
+}
+
+#schedules-complete main p {
+  margin: 0 var(--space);
+  margin-bottom: var(--space);
+  font-size: 22px;
+  color: var(--gray-0);
+}
+#schedules-complete main p small {
+  display: block;
+  font-size: 16px;
+}
+#schedules-complete main footer.fixed {
+  justify-content: center;
+}
+#schedules-complete main footer.fixed a {
+  min-width: 130px;
+  border: none;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: var(--border-radius);
+  background: transparent;
+  color: var(--black);
+  background-color: var(--green);
+  color: var(--white);
+  min-width: 180px;
+}
+#schedules-complete main footer.fixed a:hover {
+  background-color: var(--black-10);
+}
+#schedules-complete main footer.fixed a:active {
+  background-color: var(--black-75);
+}
+#schedules-complete main footer.fixed a:hover {
+  background-color: var(--green-hover);
+}
+#schedules-complete main footer.fixed a:active {
+  background-color: var(--green-active);
+}
+
+@media (min-width: 1200px) {
+  #schedules-complete main footer.fixed {
+    justify-content: flex-start;
+  }
+}
+#error .desktop {
+  display: none;
+}
+#error header {
+  margin: 0;
+  margin-top: var(--space);
+  padding: 0 3em;
+  height: unset;
+}
+#error header h1 {
+  margin: 0;
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 1.5em;
+}
+#error header h1 b {
+  color: var(--red);
+}
+#error p {
+  padding: 0 3em;
+  font-size: 20px;
+  color: var(--gray-0);
+}
+#error img {
+  width: 100%;
+  margin-bottom: 3em;
+}
+#error .columns, #error .column {
+  flex-direction: column;
+}
+
+@media (min-width: 576px) {
+  #error header {
+    height: initial;
+    min-height: initial;
+    width: 100%;
+  }
+}
+@media (min-width: 1200px) {
+  #error {
+    min-height: calc(100vh - 325px);
+  }
+  #error .desktop {
+    display: flex;
+  }
+  #error .mobile {
+    display: none;
+  }
+  #error p {
+    font-size: 16px;
+  }
+  #error .columns {
+    flex-direction: row;
+    align-items: center;
+  }
+  #error .column {
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+    height: calc(100vh - 396px);
+  }
+}
+
 /*# sourceMappingURL=main.css.map */
