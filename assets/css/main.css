@@ -187,6 +187,7 @@ hr.divider {
   color: var(--danger-color);
   border-color: var(--danger-border);
   background-color: var(--danger);
+  margin-bottom: 10px;
 }
 
 form {
